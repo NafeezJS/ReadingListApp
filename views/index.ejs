@@ -5,30 +5,16 @@
 <div class="ui divided items">
 	<% books.forEach(function(book){ %>
 	 <div class="item">
-	    <div class="image">
-	      <img src="<%= book.image %>">
-	    </div>
-	    <div class="content">
-	      <a class="header"><%= book.title %></a>
-	      <div class="meta">
-	        <span class="cinema"><%= book.date.toDateString() %></span>
-	      </div>
-	      <div class="description">
-	        <p><%= book.body %></p>
-	      </div>
-	      <div class="extra">
-	        <a href="/books/<%=book._id %>" class="ui floated basic violet button">
-	          Read More
-	          <i class="right chevron icon"></i>
-	        </a>
+	    <div class="image"><img src="<%= book.image %>"></div>
+	    <div class="content"><a class="header"><%= book.title %></a>
+	      <div class="meta"><span class="cinema"><%= book.date.toDateString() %></span></div>
+	      <div class="description"><p><%= book.body %></p></div>
+	      <div class="extra"><a href="/books/<%=book._id %>" class="ui floated basic violet button">Read More<i class="right chevron icon"></i></a>
 	      </div>
 	    </div>
 	  </div>
 	<% }); %>
 </div>
 </div>
-    
-  </div>
+</div>
 <% include partials/footer %>
-
- 
